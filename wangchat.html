@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WangChat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-tab">
+            <div class="head">
+                <i class="headimg"></i>
+            </div>
+            <ul class="fct">
+                <li class="chat" value="chat-module">
+                    <i class="fa fa-comment-o"></i>
+                </li>
+                <li class="contact" value="contact-module">
+                    <i class="fa fa-address-book-o"></i>
+                </li>
+                <li class="zone" value="zone-module">
+                    <i class="fa fa-star-half-empty"></i>
+                </li>
+            </ul>
+            <hr>
+            <div class="more">
+                <i class="fa fa-navicon"></i>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="menu">
+                <div class="menu-search">
+                    <input type="text" placeholder=" search">
+                    <div><i class="fa fa-search"></i></div>
+                </div>
+                <div class="menu-information">
+                    <span>小明</span>
+                </div>
+                <div class="menu-gadget">
+
+                </div>
+            </div>
+            <div class="content">
+                <div id="chat-module" >
+                    <div class="left-message-list ">
+                        <ul>
+                            <li class="mes-items" value="小明">
+                                <div><img src="./img/img1.jpg" alt=""></div>
+                            </li>
+                            <li class="mes-items" value="小红">
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right-chat-panel ">
+                        <div class="top-message ">
+                            <ul id="小明">
+                                <li class="message me">
+                                    <p>my message<br><span></span></p>
+                                </li>
+                                <li class="message other">
+                                    <p>other's message<br><span></span></p>
+                                </li>
+                            </ul>
+                            <ul id="小红">
+                                <li class="message me">
+                                    <p>my message<br><span></span></p>
+                                </li>
+                                <li class="message other">
+                                    <p>other<br><span></span></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="edit-message ">
+                            <div class="edit-message-gadget">
+                                <i class="fa fa-smile-o"></i>
+                            </div>
+                            <div class="edit-message-input">
+                                <!-- <form class="message-content" method="post"> -->
+                                <textarea class="message-content" rows="5" cols="20" placeholder="请输入..."></textarea>
+                                <!-- </form> -->
+                                <button class="message-send" ><span>发送</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact-module" class="hide">
+                    <span>2</span>
+                </div>
+                <div id="zone-module" class="hide">
+                    <span>3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/dynamic.js"></script>
+<script src="./js/comunication.js"></script>
+<script src="../socket-io/node_modules/socket.io/client-dist/socket.io.js"></script>
+<script src="./js/socket-client.js"></script>
+</html>

@@ -1,0 +1,443 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    /* justify-content: center; */
+    align-items: center;
+    background: linear-gradient(125deg, #92fe9d, #00c9ff, #9890e3, #bababa, rgb(177, 169, 104));
+    background-size: 500%;
+    /* 执行动画 动画名 时长 线性的 无限次播放 */
+    animation: bgAnimation 15s linear infinite;
+}
+
+/* 背景动画 */
+@keyframes bgAnimation{
+    0% {
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+input, textarea {
+    outline: none;
+}
+
+textarea::-webkit-scrollbar{
+    display: none;
+}
+
+.container {
+    /* 调试 */
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    /* 位置 */
+    position: absolute;
+    left:20%;
+    top:20%;
+    /* 大小 */
+    width: 720px;
+    height: 560px;
+    background-color: rgb(217, 231, 240);
+    display: flex;
+    flex-direction: row;
+}
+
+.left-tab {
+    /* 调试 */
+    /* border: 1px solid red;     */
+    border-right: 1px solid rgba(88, 77, 77, 0.2);
+    border-radius: 20px 0px 0px 20px;
+    height: 100%;
+    width: 7%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-tab hr {
+    width:90%;
+    margin: 5px auto;
+    border: none;
+    border-top: 1px solid rgba(88, 77, 77, 0.2);
+}
+
+.head {
+    margin-top: 10px;
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+}
+
+.head .headimg {
+    height: 90%;
+    width: 90%;
+    background: url(../img/img1.jpg);
+    background-size: 100%;
+    border-radius: 50%;
+}
+
+.fct {
+    /* 调试 */
+    /* border: 1px solid red; */
+    /* border-top: 1px solid rgb(98, 102, 105); */
+    margin: 5px auto;
+    padding: 0;
+    flex: 100%;
+    font-size: 25px;
+    list-style: none;
+    /* 弹性布局 垂直排布 */
+    display: flex;
+    flex-direction: column;
+    /* 居中 */
+    align-items: center;
+    /* 平滑过渡 */
+    transition: 0.5s ease;
+}
+
+.more {
+    /* margin: 3px auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+}
+
+
+
+.more i {
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.more i:hover {
+    background-color: rgba(141, 123, 123, 0.2);
+} 
+
+.fct li {
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+    padding: 10px;
+    border-radius: 10px;
+    /* cursor: pointer; */
+    position: relative;
+    /* 过渡 */
+    transition: 0.3s;
+}
+
+.fct li.active{
+    background-color: rgba(141, 123, 123, 0.2);
+}
+
+/* 鼠标移入样式 */
+.fct li:hover{
+    background-color: rgba(141, 123, 123, 0.2);
+}
+
+.right-content {
+    border-radius: 0px 20px 20px 0px;
+    height: 100%;
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content .menu {
+    height: 9%;
+    border-radius: 0 20px 0 0;
+    
+}
+
+.right-content .content {
+    height: 91%;
+    border-radius: 0 0 20px 0;
+
+}
+
+.right-content .menu {
+    border-bottom: 1px solid rgba(88, 77, 77, 0.2);
+    display: flex;
+    flex-direction: row;
+}
+
+.right-content .menu .menu-search{
+    /* 调试 */
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.right-content .menu .menu-search input{
+    border-radius: 8px;
+    border: none;
+    margin-top: 5%;
+    margin-left: 2%;
+    height: 55%;
+    width: 90%;
+    text-align:left;
+}
+
+.right-content .menu .menu-search .fa{
+    position: absolute;
+    left: 31%;
+    top: 3%;
+}
+
+.right-content .menu .menu-information{
+    /* 调试 */
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.right-content .menu .menu-gadget{
+    /* 调试 */
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 60%;
+    border-radius: 0 20px 0 0;
+}
+
+.hide {
+    display : none !important;
+}
+
+.content{
+    /* display: flex;
+    flex-direction: row; */
+    display: flex;
+}
+
+/* 聊天模块 */
+#chat-module{
+    /* 调试 */
+    /* border: 1px solid red;   */
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+}
+
+#chat-module .left-message-list{
+    /* 调试 */
+    /* border: 1px solid red; */
+    width: 30%;
+    height: 100%;
+    border-right: 1px solid rgba(88, 77, 77, 0.2);
+    overflow: hidden;
+}
+
+#chat-module .left-message-list ul {
+    /* 调试 */
+    /* border: 1px solid red; */
+    list-style: none;
+    padding: 0;
+    /* display: flex;
+    flex-direction: column; */
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* 隐藏滚动条 */
+#chat-module .left-message-list ul::-webkit-scrollbar {
+    display: none;
+}
+
+#chat-module .left-message-list ul .mes-items {
+    /* 调试 */
+    /* border: 1px solid red;   */
+    margin: 0;
+    width: 100%;
+    height: 8%;
+    border-bottom: 1px solid rgba(88, 77, 77, 0.2);
+}
+
+#chat-module .left-message-list ul .mes-items img{
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+#chat-module .left-message-list ul .mes-items.active{
+    background-color: rgba(141, 123, 123, 0.2);
+}
+
+#chat-module .left-message-list ul .mes-items:hover{
+    background-color: rgba(141, 123, 123, 0.2);
+}
+
+#chat-module .right-chat-panel{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#chat-module .top-message {
+    /* 调试 */
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 70%;
+    border-bottom: 1px solid rgba(88, 77, 77, 0.2);
+    overflow: hidden;
+    padding: 0;
+    
+}
+
+#chat-module .top-message ul {
+    /* 调试 */
+    /* border: 1px solid red; */
+    margin: 0;
+    height: calc(100% - 5px);
+    width: 99%;
+    list-style: none;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+}
+
+/* 隐藏滚动条 */
+#chat-module .top-message ul::-webkit-scrollbar {
+    display: none;
+}
+
+#chat-module .top-message ul .message {
+    /* 调试 */
+    /* border: 1px solid red; */
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+#chat-module .top-message ul .message p {
+    position: relative;
+    right: 0;
+    text-align: left;
+    max-width: 65%;
+    padding: 10px;
+    background-color: azure;
+    border-radius: 10px;
+    font-size: 0.9em;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+#chat-module .top-message ul .me {
+    justify-content: flex-end;
+}
+
+#chat-module .top-message ul .other {
+    justify-content: flex-start;
+}
+
+#chat-module .top-message ul .other p{
+    background-color: rgb(239, 241, 200);
+}
+
+#chat-module .edit-message {
+    /* 调试 */
+    /* border: 1px solid red; */
+    border-radius: 0 0 20px 0;
+    width: 100%;
+    height: 30%;
+    
+}
+
+#chat-module .edit-message .edit-message-gadget {
+    /* 调试 */
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 15%;
+    
+}
+
+#chat-module .edit-message .edit-message-gadget .fa{
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 3px;
+    
+}
+
+#chat-module .edit-message .edit-message-gadget .fa:hover{
+    color: rgba(48, 42, 42, 0.8);
+    
+}
+
+#chat-module .edit-message .edit-message-input{
+    /* 调试 */
+    /* border: 1px solid red;   */
+    border-radius: 0 0 20px 0;
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#chat-module .edit-message .message-content{
+    margin-top: 2px;
+    margin-left: 3px;
+    margin-right: 1px;
+    height: 70%;
+    width: 97%;
+    resize: none;
+    border-style: none;
+    border-radius: 8px;
+    background-color: rgba(250, 246, 246, 0.7);
+    
+}
+
+#chat-module .edit-message .message-send {
+    height: 20%;
+    margin-top: 4px;
+    margin-left: 80%;
+    margin-right: 3%;
+    border-style: none;
+    border-radius: 10px;
+    background-color: rgb(81, 199, 169);
+    
+}
+
+#chat-module .edit-message .message-send:hover {
+    background-color: rgba(81, 199, 169, 0.8);
+}
+
+/* 通讯录模块 */
+#contact-module {
+    /* 调试 */
+    /* border: 1px solid red;   */
+    width: 100%;
+    height: 100%;
+}
+
+/* 朋友圈模块 */
+#zone-module{
+    /* 调试 */
+    /* border: 1px solid red;   */
+    width: 100%;
+    height: 100%;
+}
